@@ -1,0 +1,190 @@
+
+.discount_section{
+    float: left;
+    width: 100%;
+    background-image: url('../Images/banner1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 80px 10px;
+    position: relative;
+    margin-bottom: 40px;
+    }
+    .discount_section::before{
+        background-color: #f97242;
+        position: absolute;
+        content: "";
+        width: 100%;
+        left: 0px;
+        top:0px;
+        height: 100%;
+        opacity: 0.8;
+    }
+    .discount_section_data{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+       align-items: center;
+       text-align: center;
+       flex-direction: column;
+       gap: 20px 0px;
+       position: relative;
+    z-index: 99;
+    }
+    .discount_section_data h5{
+        color: #fff;
+        font-size: 48px;
+        font-weight: 100;
+        margin: 0px;
+    }
+    .discount_section_data small{
+        color: #fff;
+        font-size: 16px;
+    }
+    .discount_section_data a{
+    padding: 6px 30px;
+        background: #eee;
+        font-size: 16px;
+        font-family: Roboto,sans-serif;
+        font-weight: 400;
+        color: #000;
+        text-transform: capitalize;
+    }
+    .discount_section_data a:hover{
+        text-decoration: none;
+        color: #000;
+    }
+    /*mobile rotation*/
+@media (max-width: 767px) {
+    .header_bar .nav_btn{
+     display: block;
+     }
+    .header_bar .nav_bar{
+         display: none;
+     }
+     .header_bar .call_us {
+         display: none;
+     }
+     .banner .slider_2_text span {
+         display: none;
+     }
+     .banner .slider_2_text h2 {
+         font-size: 28px;
+     }
+     .features_section .features_grid {
+         grid-template-columns: 1fr 1fr;
+         grid-template-areas: ". .";
+     }
+     .product_section .product_grid {
+         grid-template-columns: 1fr 1fr;
+         grid-template-areas: ". .";
+     }
+     .special_product_section{
+         grid-template-columns: 1fr; 
+         grid-template-areas: 
+           "."; 
+           padding: 0px 40px;
+     }
+     .special_product_figure {
+         text-align: center;
+     }
+
+     .footer_data {
+         grid-template-columns: 1fr 1fr;
+         grid-template-areas: ". .";
+     }
+
+     }
+
+/*mobile*/ 
+ @media (max-width: 540px) {
+     
+     .responsive_nav_bar .responsive_call_us {
+         justify-content: right;
+         align-items: right;
+     }
+     .banner .slider_2_text h2 {
+         font-size: 16px;
+     }
+     .banner .slider_2_text a {
+         font-size: 15px;
+         width: 110px;
+         height: 32px;
+     }
+     .banner .slider_2_text {
+         left: 14% !important;
+     }
+     .features_section .features_grid {
+         grid-template-columns: 1fr;
+         grid-template-areas: ".";
+     }
+     .product_section .product_grid {
+         grid-template-columns: 1fr ;
+         grid-template-areas: ".";
+     }
+     .product_card a .figure{
+         text-align: center;
+     } 
+     .product_card a .figure img {
+         width: 100%;
+     }
+     .special_product_section{
+         grid-template-columns: 1fr; 
+         grid-template-areas: 
+           "."; 
+     padding: 0px 20px;
+     }
+     .special_product_figure {
+         text-align: center;
+     }
+     .footer_data {
+         grid-template-columns: 1fr;
+         grid-template-areas: ".";
+     }
+
+
+ }
+ @media (max-width: 470px) { 
+
+     .change_banner_layout {
+         grid-template-columns: 1fr;
+         grid-template-areas: '.';
+     }
+
+ }
+
+ @media (max-width: 425px) { 
+     .testim .arrow.left {
+         left: 14px;
+     }
+     .testim .arrow.right {
+         right: 14px;
+     }
+     footer h1 {
+         font-size: 18px;
+     }
+     footer a {
+         font-size: 18px;
+     }
+
+ }
+ @media (max-width: 335px) { 
+     .banner .slider_2_text h2 {
+         font-size: 14px;
+     }
+   
+ }
+
+ @media (max-width: 360px) { 
+     .responsive_nav_bar .responsive_call_us {
+         justify-content: right;
+         align-items: unset !important;
+         flex-direction: column;
+         text-align: right;
+         gap: 20px 0px;
+     }
+     .responsive_nav_bar .responsive_call_us .account_btn {
+         right: 33px;
+         top:-8px;
+         text-align: left;
+     }
+ }

@@ -1,0 +1,130 @@
+
+/*features_section start  */
+.features_section{
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+    padding:0px 10px;
+}
+
+.features_section .features_grid{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: auto; 
+    gap: 25px 25px; 
+    grid-template-areas: 
+      ". . ."; 
+}
+.features_card figure{
+    margin: 0px;
+   position: relative;
+}
+.features_card figure img{
+    width: 100%;
+}
+.features_card figure figcaption{
+background-color: rgba(255, 99, 71, 0.7);
+width: 100%;
+height: 100%;
+float: left;
+position: absolute;
+top: 0px;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 15px 0px;
+visibility: hidden;
+display: flex;
+-webkit-transition: all .45s ease-in-out;
+-moz-transition: all .45s ease-in-out;
+-o-transition: all .45s ease-in-out;
+-ms-transition: all .45s ease-in-out;
+opacity: 0;
+}
+.features_card figure:hover figcaption{
+    -webkit-transition: all .45s ease-in-out;
+    -moz-transition: all .45s ease-in-out;
+    -o-transition: all .45s ease-in-out;
+    -ms-transition: all .45s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+}
+.features_card figure figcaption h4{
+margin: 0px;
+color: #ffffff;
+font-size: 24px;
+}
+
+/*features_section end  */
+
+   /*mobile*/ 
+   @media (max-width: 540px) { 
+    .banner .slider_2_text h2 {
+        font-size: 16px;
+    }
+    .banner .slider_2_text a {
+        font-size: 15px;
+        width: 110px;
+        height: 32px;
+    }
+    .banner .slider_2_text {
+        left: 14% !important;
+    }
+    .features_section .features_grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: ".";
+    }
+    .product_section .product_grid {
+        grid-template-columns: 1fr ;
+        grid-template-areas: ".";
+    }
+    .product_card a .figure{
+        text-align: center;
+    } 
+    .product_card a .figure img {
+        width: unset;
+    }
+}
+@media (max-width: 470px) { 
+
+    .change_banner_layout {
+        grid-template-columns: 1fr;
+        grid-template-areas: '.';
+    }
+
+}
+
+@media (max-width: 425px) { 
+    .testim .arrow.left {
+        left: 14px;
+    }
+    .testim .arrow.right {
+        right: 14px;
+    }
+    footer h1 {
+        font-size: 18px;
+    }
+    footer a {
+        font-size: 18px;
+    }
+
+}
+@media (max-width: 335px) { 
+    .banner .slider_2_text h2 {
+        font-size: 14px;
+    }
+  
+}
+
+@media (max-width: 350px) { 
+
+    .booking_detail form .change_banner_layout .booking_fields .time_date_input {
+        flex-direction: column;
+    }
+    .depature_time_box span {
+        left: 41px !important;
+    }
+    .booking_detail form .change_banner_layout .booking_fields i {
+        top: 41px;
+    }
+}

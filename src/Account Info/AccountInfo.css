@@ -1,0 +1,174 @@
+
+    .signup_container{
+        max-width: 650px;
+        margin: 0px auto;
+     }
+
+     .sign_up_section .signup_form form label{
+    display: block;
+width: 100%;
+margin-bottom: 4px;
+color: #fff;
+}
+.sign_up_section .signup_form form label span{
+    color:#f97242;
+}
+.sign_up_section{
+    float: left;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.sign_up_section h2{
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup_main{
+    padding:0px 15px ;
+}
+.sign_up_section .signup_form{
+    float: left;
+    width: 100%;
+    background-color: #2b2b2b;
+    padding: 30px 30px;
+    margin-bottom: 10px;
+}
+.sign_up_section .signup_form form .business_input_field{
+float: left;
+width: 100%;
+}
+.sign_up_section .signup_form form .business_input_field input{
+width: 100%;
+padding: 0.375rem 0.75rem;
+font-size: 1rem;
+line-height: 1.5;
+color: #495057;
+background-color: #fff;
+background-clip: padding-box;
+border: 1px solid #ced4da;
+border-radius: 0.25rem;
+transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+ margin-bottom: 20px;
+ outline: none;
+}
+.sign_up_section .signup_form form .signup_input_field{
+display: grid;
+grid-template-columns: auto auto;
+gap: 6px 30px;
+width: 100%;
+margin-bottom: 7px;
+}
+.sign_up_section .signup_form form .signup_input_field input{
+
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+     margin-bottom: 20px;
+     outline: none;
+     width: 100%;
+}
+.sign_up_section .signup_form form input:focus{
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 50%);
+    outline: 1px solid #5696dbd4;
+     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.sign_up_section .signup_form form .submit_btn{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.sign_up_section .signup_form form .submit_btn button{
+    color: #fff;
+    background-color: #f97242;
+    border-color: #f97242;
+    border: 1px solid transparent;
+    padding: 6px 45px;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+     font-size: 17px;
+     border-radius: 4px;
+    }
+    .sign_up_section .signup_form form .submit_btn button:hover{
+        color: #fff;
+        background-color: #f36734;
+        border-color: #f97242;
+    }
+    .sign_up_section .login_form form .submit_btn button:focus{
+        box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 50%);
+    }
+    .sign_up_section .signup_form form .captcha_box{
+        float: left;
+        width: 100%;
+        margin-bottom: 25px;
+        }
+    .signup_form .sign_up_btn{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #f97242;
+        padding-bottom: 19px;
+        width: 100%;
+    }
+    .signup_form .sign_up_btn span{
+     color: #fff;   
+    }
+    .signup_form .sign_up_btn span a{
+        text-decoration: none;
+        color: #f97242;
+        cursor: pointer;
+    }
+    .signup_form .policy_check{
+
+        float: left;
+        width: 100%;
+        font-size: 13px;
+        text-align: center;
+    }
+    .signup_form .policy_check p{
+line-height: 29px;
+color: #fff;
+margin: 0px;
+    }
+    .signup_form .policy_check p a{
+        text-decoration: none;
+        color: #f97242;
+        cursor: pointer;
+    }
+/*RESPONSIVE*/
+
+/*Tablet*/
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    }
+
+
+
+
+
+/*mobile rotation*/
+@media (max-width: 767px) {
+
+    }
+
+/*mobile*/
+@media (max-width: 540px) { 
+  
+        .sign_up_section .signup_form form .signup_input_field {
+            grid-template-columns: auto;
+        }
+    }
+   
