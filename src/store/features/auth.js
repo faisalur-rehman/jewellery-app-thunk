@@ -23,6 +23,11 @@ export const login = (data) => async (dispatch) => {
     dispatch({ type: "login", payload: response.data });
     localStorage.setItem("user", JSON.stringify(response.data));
     localStorage.setItem("token", response.data.user.token);
+    response.data.user.isAdmin
+      ? data.history.push("/all-users")
+      : data.history.push("/");
+
+    data.history.push("/");
   } catch (error) {
     data.setError(error.response.data.message);
   }

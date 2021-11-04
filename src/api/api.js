@@ -5,7 +5,7 @@ export const api = axios.create({
 });
 
 const user = JSON.parse(localStorage.getItem("user"));
-
+console.log("user");
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem("token");
@@ -31,8 +31,8 @@ export function getProducts() {
 export function getSingleProduct(data) {
   return api.get(`/product/${data.id}`);
 }
-export function getProfile(data) {
-  return api.get(`/user/profile/${user._id}`);
+export function getProfile() {
+  return api.get(`/user/profile/${user.user._id}`);
 }
 export function updateProfile(data) {
   return api.patch(`/user/update-profile`, { ...data });

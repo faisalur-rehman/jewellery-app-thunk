@@ -8,6 +8,7 @@ import featuredProductsSlice from "./features/featuredProducts";
 import specialProductSlice from "./features/specialProduct";
 import singleProductSlice from "./features/singleProducts";
 import wishlistSlice from "./features/wishlist";
+import cartSlice from "./features/addToCart";
 
 const composedEnhancer = composeWithDevTools(applyMiddleware(thunkMiddleware));
 
@@ -18,6 +19,7 @@ const rootReducer = combineReducers({
   special: specialProductSlice,
   single: singleProductSlice,
   wishlist: wishlistSlice,
+  cart: cartSlice,
 });
 
 const store = createStore(rootReducer, composedEnhancer);

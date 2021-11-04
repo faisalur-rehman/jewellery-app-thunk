@@ -26,7 +26,6 @@ const SingleProductScreen = ({
 export default SingleProductScreen;
 
 function FormFields({ handleAddToWishlist, data, wishListData }) {
-  console.log("single", data);
   return (
     <>
       <section className="single_product_detail_section">

@@ -1,41 +1,28 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React from "react";
 import ProductCartScreen from "./ProductCartScreen";
 import * as api from "../api/api";
 import useApi from "../hooks/useApi";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 const ProductCart = () => {
-  const [cartProducts, setCartProducts] = useState([]);
+  const cart = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
   const { request, data } = useApi(api.order);
 
-  useEffect(() => {
-    function fetchData() {
-      localStorage.getItem("cart") &&
-        setCartProducts(JSON.parse(localStorage.getItem("cart")));
-    }
-    fetchData();
-  }, []);
-
   function removeCartProduct(id) {
-    console.log("id", id);
-    setCartProducts([
-      ...cartProducts.filter((product) => product.product !== id),
-    ]);
-    localStorage.setItem(
-      "cart",
-      JSON.stringify(cartProducts.filter((product) => product.product !== id))
-    );
+    dispatch({ type: "cart/removeProduct", payload: id });
   }
   async function handleOrder() {
     try {
-      await request({ orders: [...cartProducts] });
+      await request({ orders: cart.products });
     } catch (_) {}
   }
 
   return (
     <>
       <ProductCartScreen
-        cartProducts={cartProducts}
+        cart={cart}
         removeCartProduct={removeCartProduct}
         handleOrder={handleOrder}
         data={data}

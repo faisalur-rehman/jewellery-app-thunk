@@ -32,28 +32,29 @@ const SingleProduct = () => {
   function handleSubmit({ formValues }) {
     //logic for adding items to cart
     let cartObj = {
-      product: singleProduct._id,
+      productId: singleProduct._id,
       price: singleProduct.price,
       name: singleProduct.name,
       ...formValues,
       // ...singleProduct.data.product,
     };
-    let prevCart = JSON.parse(localStorage.getItem("cart"));
-    if (prevCart && prevCart.length > 0) {
-      let found = prevCart.findIndex(
-        (element) => element.product._id === singleProduct._id
-      );
-      if (+found === -1) {
-        localStorage.setItem("cart", JSON.stringify([...prevCart, cartObj]));
-      } else {
-        prevCart[found] = cartObj;
+    dispatch({ type: "cart/addProduct", payload: cartObj });
+    // let prevCart = JSON.parse(localStorage.getItem("cart"));
+    // if (prevCart && prevCart.length > 0) {
+    //   let found = prevCart.findIndex(
+    //     (element) => element.product._id === singleProduct._id
+    //   );
+    //   if (+found === -1) {
+    //     localStorage.setItem("cart", JSON.stringify([...prevCart, cartObj]));
+    //   } else {
+    //     prevCart[found] = cartObj;
 
-        localStorage.setItem("cart", JSON.stringify([...prevCart]));
-      }
-    } else {
-      localStorage.setItem("cart", JSON.stringify([cartObj]));
-    }
-    history.push("/mycart");
+    //     localStorage.setItem("cart", JSON.stringify([...prevCart]));
+    //   }
+    // } else {
+    //   localStorage.setItem("cart", JSON.stringify([cartObj]));
+    // }
+    // history.push("/mycart");
   }
   return (
     <>

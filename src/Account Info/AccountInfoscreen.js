@@ -1,8 +1,6 @@
 import React from "react";
 import "./AccountInfo.css";
-import { Link } from "react-router-dom";
 import { Formik, Form } from "formik";
-import products from "../Images/Products1.png";
 import * as Yup from "yup";
 import FormikControl from "../SignUp/FormikControl";
 import UserOrders from "../UserOrders/UserOrders";

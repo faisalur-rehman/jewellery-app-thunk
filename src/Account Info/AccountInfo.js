@@ -13,22 +13,22 @@ let initialValues = {
 };
 
 const AccountInfo = () => {
-  const [value, setValue] = useState({});
+  const [, setValue] = useState({});
   const { request, data } = useApi(api.getProfile);
   useEffect(() => {
     async function fetchData() {
       try {
-        const { data } = await request(localStorage.getItem("id"));
-        console.log("dataaa", data);
+        const { data } = await request();
         initialValues = data.user;
         setValue((prev) => ({ ...prev, ...data.user }));
       } catch (_) {}
     }
     fetchData();
+    //eslint-disable-next-line
   }, []);
 
   const onSubmit = async (values, submitProps) => {
-    console.log("Form data", values);
+    // console.log("Form data", values);
     submitProps.setSubmitting(false);
     // try {
     //   await request(values);
